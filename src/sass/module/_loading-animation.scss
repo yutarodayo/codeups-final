@@ -1,0 +1,92 @@
+@use "global" as *;
+
+.loading-animation__wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loading-animation__common {
+  
+  position: absolute;
+  bottom: -100vh; /* 初期状態で画像は見えない位置に */
+}
+
+.loading-animation__common img {
+height: 100vh;
+object-fit: cover;
+}
+
+.loading-animation__left {
+  width: 50%;
+  height: 100vh;
+  left: 0;
+  
+}
+
+.loading-animation__left img{
+  object-position: 100% 50%;
+}
+
+.loading-animation__right {
+  width: 50%;
+  height: 100vh;
+  left: 50%;
+}
+
+.loading-animation__right img {
+  object-position: 0% 50%;
+}
+
+
+.loading__content {
+  opacity: 0;
+  position: absolute;
+  top: 50.2%;
+  left: 49.8%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  transition: opacity 0.5s;
+  background-color: #fff;
+}
+
+.loading__title {
+  color: $accent;
+  text-align: center;
+  font-weight: $regular;
+  font-size: rem(40);
+  letter-spacing: rem(21.6);
+  line-height: 1.2;
+  text-indent: rem(20);
+
+  @include mq(md) {
+    font-size: rem(80);
+    letter-spacing: rem(43.2);
+  }
+}
+
+.loading__subtitle {
+  color: $accent;
+  font-size: rem(20);
+  text-align: center;
+}
+
+@keyframes slideUpLeft {
+  0% {
+    bottom: -100vh;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes slideUpRight {
+  0% {
+    bottom: -100vh;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+

@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.contact__inner {
+  padding: rem(80) 0 rem(103);
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1440);
+    padding: rem(140) 0 rem(160);
+  }
+}

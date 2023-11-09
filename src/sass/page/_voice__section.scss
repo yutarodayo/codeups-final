@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.voice__inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+    max-width: rem(1440);
+  }
+}
+
+.voice__inner {
+  padding-top: rem(81);
+  padding-bottom: rem(83);
+
+  @include mq(md) {
+    padding-top: rem(134);
+    padding-bottom: rem(145);
+  }
+}
+
+.voice-cards__space {
+  margin-top: rem(42);
+
+  @include mq(md) {
+    margin-top: rem(27);
+  }
+}
+
+.voice-card__img {
+  margin-left: rem(13);
+  margin-top: rem(6);
+}
+
+.button__wrapper.button__space--voice {
+  margin-top: rem(40);
+  padding-right: rem(1);
+
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.section-title {
+font-size: rem(32);
+color: $text-base;
+font-weight: $regular;
+text-align: center;
+
+@include mq(md) {
+font-size: rem(40);
+}
+}
+
+.section-title::first-letter {
+    color: $accent;
+}
+
+.section-title__ja {
+    font-size: rem(12);
+    color: $accent;
+    text-align: center;
+font-family: $font-family_jp1;
+}
+
+.section-title__white {
+    @include mq(md) {
+        color: $white;
+        margin-top: rem(1.4);
+    }
+}
+
+.section-title__white::first-letter {
+    @include mq(md) {
+        color: $white;
+    
+    }
+}

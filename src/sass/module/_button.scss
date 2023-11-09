@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.button__wrapper {
+    display: block;
+    text-align: center;
+    padding-right: rem(3);
+@include mq(md) {
+padding-right: rem(5);
+}
+}
+
+
+.button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.button__top {
+  font-size: rem(14);
+  line-height: 1.45;
+  color: $white;
+  background-color: $accent;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  
+  padding: rem(18) rem(89) rem(16) rem(40);
+  transition: 0.3s ease-in-out;
+  z-index: 2;
+  position: relative;
+
+  @include mq(md) {
+    padding: rem(16) rem(87) rem(16) rem(41);
+  }
+}
+
+.button__top::after {
+    background-color: $white;
+    border: rem(1) solid $accent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+  }
+
+  .button__top:hover {
+    color: $accent;
+  }
+  .button__top:hover::after {
+    transform: scale(1, 1);
+  }
+
+  .button__top:hover 
+  .button__top__span::before,
+  .button__top:hover
+  .button__top__span::after
+   {
+    background-color: $accent;
+  }
+
+  .button__top span {
+    position: relative;
+  }
+
+  .button__top span::before {
+  content: '';
+	position: absolute;
+	top: 46%;
+	right: rem(-52);
+	transform: translateY(-50%) rotate(42deg);
+	width: rem(10);
+	height: rem(1);
+	background-color: $white;
+
+    @include mq(md) {
+    right: rem(-49);
+    top: 40%;
+    }
+  }
+
+
+  .button__top span::after {
+    content: '';
+	position: absolute;
+	top: 58%;
+	right: rem(-51);
+	transform: translateY(-50%);
+	width: rem(42);
+	height: rem(1);
+	background-color: $white;
+
+    @include mq(md) {
+    width: rem(43);
+    right: rem(-50);
+    top: 55%;
+    }
+  }
+
+.button__bottom {
+  position: absolute;
+  top: rem(4);
+  left: rem(4);
+  width: 100%;
+  height: 100%;
+  border: rem(1) solid $accent;
+  transition: 0.2s;
+  z-index: 1;
+}

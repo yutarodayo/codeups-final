@@ -1,0 +1,214 @@
+@use "global" as *;
+
+.footer {
+  background-color: $accent;
+  width: 100%;
+  height: 100%;
+  font-family: $font-family_jp1;
+
+  // @include mq(md) {
+  // height: rem(559);
+  // }
+}
+
+.footer__inner {
+  max-width: rem(600);
+
+  @include mq(md) {
+  max-width: none;
+  }
+}
+
+.footer__header {
+  @include mq(md) {
+  display: flex;
+  align-items: center;
+  }
+}
+
+
+.footer__logo {
+  display: block;
+  width: 38.3636%; //120/330
+  max-width: rem(205);
+  padding-right: rem(10);
+  cursor: pointer;
+}
+
+.footer__logo:hover {
+  opacity: 0.7;
+}
+
+.sns__wrapper {
+  margin-top: rem(6);
+  @include mq(md) {
+  margin-left: rem(35);
+}
+}
+
+
+.footer__flex-layout {
+  display: flex;
+
+  @include mq(md) {
+  margin-top: rem(10);
+  }
+}
+
+.footer-left__wrapper,
+.footer-right__wrapper {
+  // width: calc((100% - 4.7059%) / 2);
+  
+  @include mq(md) {
+  display: flex;
+  }
+}
+
+.footer-left__wrapper {
+  width: 100%;
+}
+
+.footer-right__wrapper {
+  margin-left: 4.7059%; //16/340
+width: calc(100% - 4.7059%);
+  @include mq(md) {
+  margin-left: 0;
+  }
+}
+
+
+.footer-right1,
+.footer-right2 {
+  @include mq(md) {
+    width: calc((100% - rem(16)) / 2);
+  
+  }
+}
+.footer-left1 {
+  width: 100%;
+  @include mq(md) {
+    width: 51.4388%;
+  
+  }
+}
+
+.footer-left2 {
+  @include mq(md) {
+    width: 48.5%;
+  
+  }
+
+
+}
+
+.footer-left2,
+.footer-right1 {
+@include mq(md) {
+margin-left: rem(3);
+}
+}
+
+.footer-right2 {
+  @include mq(md) {
+  margin-left: rem(15);
+  }
+}
+
+
+.footer__items {
+  display: block;
+  color: $white;
+}
+
+.footer__item {
+  padding-left: rem(22);
+  padding-top: rem(24.6);
+
+  @include mq(md) {
+  padding-left: rem(22.5);
+  }
+}
+
+.footer__item--main.footer__item__space {
+  @include mq(md) {
+    padding-top: rem(41);
+  }
+}
+
+.footer__item a {
+  display: block;
+  font-size: rem(16);
+  line-height: 1.08;
+  letter-spacing: rem(-0.13);
+}
+
+.footer__item a:hover {
+  opacity: 0.7;
+}
+
+.footer__item--right.footer__item__space {
+  padding-top: rem(40);
+}
+
+.footer__item--right a {
+  line-height: 1.07;
+}
+
+.footer__item--main.footer__item--adjust {
+  padding-top: rem(39);
+}
+
+.footer__item--main {
+  padding-top: rem(43);
+  font-weight: $bold;
+
+  @include mq(md) {
+  padding-top: rem(15.9);
+  }
+}
+
+
+.footer__item--main.footer__item--main__space {
+  padding-top: rem(41);
+@include mq(md) {
+  padding-top: rem(40.3);
+}
+}
+
+.footer__item--main.footer__item--main__space--pc {
+  @include mq(md) {
+  padding-top: rem(16);
+  
+}
+}
+
+
+.footer__item--main a {
+  position: relative;
+}
+
+.footer__item--main a::before {
+  content: url(../images/common/_hitode.svg);
+  display: inline-block;
+  transform: scale(1);
+  position: absolute;
+  top: -8%;
+  left: rem(-22);
+}
+
+.br_pc {
+  display: block;
+
+  @include mq(md) {
+  display: none;
+  }
+}
+
+.footer__copy {
+  color: $white;
+  font-size: rem(12);
+  font-weight: $regular;
+  line-height: 1.5;
+  text-align: center;
+}
+

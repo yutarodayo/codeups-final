@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.access__map {
+    width: 100%; /* 今回はinnerで幅決めてあるからそのpadd以外分残して100%でOK*/
+    max-width: 100%;
+
+    @include mq(md) {
+
+width: 91.22%;
+}
+}
+
+.iframe-wrap {
+    width: 100%;
+    padding-top: 54.2373%; /* 縦160/横295*/
+    position: relative;
+
+    @include mq(md) {
+        padding-top: 54.2125%; /* 縦148/横273*/
+    }
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.iframe-wrap:hover {
+    opacity: 0.7;
+}

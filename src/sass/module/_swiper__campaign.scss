@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.campaign .swiper-slide {
+  width: max-content;
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.campaign__swiper  {
+margin-right: calc(50% - 50vw);
+}
+
+.swiper__padding {
+  padding: rem(4) rem(1.6);
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-button__wrapper {
+  display: none;
+}
+
+@include mq(md) {
+  .swiper-button__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: calc(50% + 20.87vw);
+  }
+
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    left: calc(50% + 32vw);
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+    top: rem(-45);
+    height: rem(80);
+    width: rem(80);
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  /* 前へ次への矢印カスタマイズ */
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    height: rem(80);
+    margin: auto;
+    width: rem(80);
+  }
+  /* 前への矢印カスタマイズ */
+  .swiper-button-prev::after {
+    background-image: url(../images/only_pc/allow_left.svg);
+  }
+  /* 次への矢印カスタマイズ */
+  .swiper-button-next::after {
+    background-image: url(../images/only_pc/allow_right.svg);
+  }
+}

@@ -1,0 +1,38 @@
+@use "global" as *;
+
+
+.overlay-image__container {
+    position: relative;
+    width: 100%;
+
+    @include mq(md) {
+    max-width: rem(1080);
+    }
+  }
+  
+ 
+  .image__wrapper {
+    margin-left: auto;
+    padding-top: 8.3%;
+    width: 81.4493%; // 281/345+微調整1%
+  }
+
+  .image__wrapper {
+    @include mq(md) {
+      padding-top: 7.7%;
+      max-width: rem(880);
+    }
+  }
+
+  .overlay-image__left {
+    position: absolute;
+    top: 0.4%;
+    left: -0.3%;
+    object-fit: cover;
+    width: 37.3%; /* 128/345＋微調整 */
+  
+    @include mq(md) {
+      max-width: rem(404);
+    }
+  }
+

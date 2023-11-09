@@ -1,0 +1,101 @@
+@use "global" as *;
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: $font-family_jp1;
+}
+
+.table__header {
+  text-align-last: left;
+  color: $text-base;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.5;
+  padding-top: rem(39);
+  padding-bottom: rem(1.9);
+
+  @include mq(md) {
+  line-height: 1.75;
+  padding-top: rem(41);
+  padding-bottom: 0;
+  }
+}
+
+.table__header__space {
+
+
+  @include mq(md) {
+    padding-top: rem(36);
+  }
+  
+
+  @include mq(md) {
+  padding-top: rem(34);
+  padding-bottom: rem(2.5);
+  }
+}
+
+tr:first-child>* {
+    @include mq(md) {
+        padding-top: 0;
+    }
+}
+
+
+.table__line {
+  border-top: rem(1) solid $accent;
+}
+
+.table td {
+    color: $text-base;
+  font-size: rem(13.8);
+  font-weight: $regular;
+  line-height: 1.7;
+  padding-top: rem(8.4);
+
+  @include mq(md) {
+  padding-top: rem(5);
+  line-height: 1.7143;
+  }
+}
+
+.table__item {
+  text-align-last: left;
+  width: calc(100% - 23%);
+
+  @include mq(md) {
+    letter-spacing: rem(2.2);
+    }
+}
+
+.table td.table__item--space {
+  padding-top: rem(5);
+  @include mq(md) {
+    padding-top: rem(11);
+  }
+  
+}
+
+
+
+.table td.table__data {
+  text-align: right;
+  width: 23%; //100/345
+  
+  font-family: $font-family_jp1;
+
+  @include mq(md) {
+    letter-spacing: rem(1);
+    line-height: 1.6;
+    padding-top: rem(9);
+    }
+}
+
+
+tr:last-child>* {
+    @include mq(md) {
+        padding-bottom: rem(98);
+    }
+    
+}

@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.contact__content {
+  text-shadow: 0 rem(4) rem(3) rgba(0, 0, 0, 0.3098);
+
+  @include mq(md) {
+    text-shadow: none;
+  }
+}
+
+.section-title.contact__title {
+  font-size: rem(80);
+  line-height: 1;
+  font-weight: $regular;
+
+  @include mq(md) {
+    margin-top: rem(-24);
+    font-size: rem(38);
+  }
+
+  @include mq(lg) {
+    font-size: rem(50);
+  }
+
+  @include mq(xl) {
+    font-size: rem(80);
+  }
+}
+
+.section-title__ja.section-title__ja--contact {
+  margin-top: rem(-4);
+}
+
+.contact__text {
+  font-size: rem(14);
+  line-height: 1.2857;
+  font-weight: $regular;
+  color: $accent;
+  text-align: center;
+  margin-top: rem(8);
+  font-family: $font-family_jp1;
+}
+
+.button__bottom--contact {
+  box-shadow: 0 rem(4) rem(3) rgba(0, 0, 0, 0.1198);
+
+  @include mq(md) {
+    box-shadow: none;
+  }
+}
+
+.button__wrapper.button__space--contact {
+  margin-top: rem(38);
+}

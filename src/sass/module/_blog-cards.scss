@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.blog-cards {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    row-gap: rem(40);
+    
+    @include mq(md) {
+    flex-direction: row;
+    column-gap: rem(40); 
+align-items: stretch;
+flex-wrap: wrap;
+}
+}

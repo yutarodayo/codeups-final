@@ -1,0 +1,65 @@
+@use "global" as *;
+
+body {
+    position: relative;
+}
+
+/* page_top */
+#to_top {
+  display: block;
+  position: fixed;
+  right: rem(15);
+  bottom: rem(16);
+  cursor: pointer;
+  z-index: 100;
+  background-color: #fff;
+  width: rem(48);
+  height: rem(48);
+  box-sizing: border-box;
+  border: solid rem(1) $accent;
+  border-radius: 50%;
+
+  @include mq(md) {
+    right: rem(20);
+    bottom: rem(20);
+    width: rem(80);
+    height: rem(80);
+    box-shadow: 0 rem(4) rem(3) rgba(0, 0, 0, 0.1198);
+  }
+}
+
+#to_top::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  width: rem(28);
+  border-top: solid rem(1) $accent;
+  transform: rotate(90deg);
+
+  @include mq(md) {
+    top: 50%;
+    left: 25%;
+    width: rem(40);
+  }
+}
+
+#to_top::after {
+  content: "";
+  position: absolute;
+  border-top: solid rem(1) #408f95;
+  transform: rotate(-50deg);
+  top: 26%;
+  left: 35%;
+  width: rem(9);
+
+  @include mq(md) {
+    top: 30%;
+    left: 40.4%;
+    width: rem(10);
+  }
+}
+
+#to_top:hover {
+  opacity: 0.7;
+}

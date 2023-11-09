@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.text-box__container {
+  display: block;
+  width: 100%;
+  height: 65%;
+
+  @include mq(md) {
+    display: flex;
+    width: 82.4493%;
+  }
+}
+
+.text-box__title {
+  z-index: 20;
+  font-size: rem(40);
+  font-weight: normal;
+  line-height: 1;
+  color: $accent;
+
+  @include mq(md) {
+    font-size: rem(40);
+    line-height: 1.25;
+    color: $white;
+    width: 45.4545%;
+    margin-top: rem(3);
+    padding-left: rem(5);
+  }
+
+  @include mq(lg) {
+  font-size: rem(50);
+  }
+
+  @include mq(xl) {
+  font-size: rem(80);
+  }
+}
+
+.text-box {
+  @include mq(md) {
+    padding-left: rem(40);
+    padding-right: rem(40);
+    height: 100%;
+  }
+}
+
+.text-box__text {
+
+  font-size: rem(16);
+  line-height: 1.45;
+  color: $text-base;
+  width: 100%;
+letter-spacing: rem(-0.1);
+font-family: $font-family_jp1;
+
+  @include mq(md) {
+    color: $white;
+    height: auto;
+    max-width: rem(400);
+    margin-top: rem(7);
+    line-height: 1.49;
+  }
+}

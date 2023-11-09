@@ -1,0 +1,12 @@
+@use "global" as *;
+
+
+.access__wrapper {
+    padding-left: rem(25);
+    padding-right: rem(25);
+    
+    @include mq(md) {
+    padding-left: 0;
+    padding-right: 0;
+    }
+    }

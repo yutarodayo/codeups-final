@@ -1,0 +1,51 @@
+@use "global" as *;
+
+$hamburger-icon__bar-width: rem(32);
+$hamburger-icon__bar-height: rem(1);
+$hamburger-icon__bar-color: #fff;
+
+
+.hamburger-icon {
+  z-index: 9999;
+  height: inherit;
+
+
+  @include mq(md) {
+  display: none;
+  }
+}
+
+.hamburger-icon span {
+  position: relative;
+  display: block;
+  width: $hamburger-icon__bar-width;
+  height: $hamburger-icon__bar-height;
+  background-color: $hamburger-icon__bar-color;
+  transition: ease 0.5s;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger-icon span:nth-child(2) {
+  margin: rem(11) 0;
+}
+
+.hamburger-icon span:nth-child(3) {
+  top: 0;
+}
+
+.hamburger-icon.is-active span:nth-child(1) {
+  top: rem(11);
+  transform: rotate(37deg);
+}
+
+.hamburger-icon.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.is-active span:nth-child(3) {
+  top: rem(-12.48);
+  transform: rotate(-37deg);
+}

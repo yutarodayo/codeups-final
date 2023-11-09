@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.price {
+  background-color: #ddf0f1;
+}
+
+.price__inner {
+  padding-top: rem(76);
+  padding-bottom: rem(83);
+  max-width: rem(600);
+
+  @include mq(md) {
+    padding-top: rem(89);
+    padding-bottom: rem(105);
+    max-width: rem(1440);
+  }
+}
+
+.price__inner.inner {
+  @include mq(md) {
+    padding-left: rem(24);
+    padding-right: rem(31);
+  }
+  
+}
+
+.price__content {
+  margin-top: rem(29);
+
+  @include mq(md) {
+    margin-top: rem(39);
+  }
+}
+
+.table__wrapper {
+  @include mq(md) {
+    margin-right: 8.6111%; //93/1080
+  }
+}
+
+.button__wrapper.button__space--price {
+  margin-top: rem(39);
+
+  @include mq(md) {
+    margin-top: rem(80);
+    padding-left: rem(6);
+  }
+}

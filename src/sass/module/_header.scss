@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9001;
+  height: rem(80);
+  background-color: rgba(13, 41, 54, 0.68);
+  
+
+  @include mq(md) {
+    height: rem(90);
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  padding-left: rem(13.6);
+  padding-right: rem(15);
+
+  @include mq(md) {
+    padding-left: rem(36);
+    padding-right: rem(21);
+  }
+}
+
+.header__title {
+  position: relative;
+  z-index: 9999;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  width: rem(106);
+  padding-top: rem(5);
+
+  @include mq(md) {
+    width: rem(142);
+  }
+}
+
+.header__title:hover {
+  opacity: 0.7;
+}
+

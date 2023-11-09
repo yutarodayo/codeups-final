@@ -1,0 +1,80 @@
+@use "global" as *;
+
+.illustrated-book__container {
+    width: 100%;
+
+    @include mq(md) {
+    display: flex;
+    }
+}
+
+.illustrated-book__left {
+    @include mq(md) {
+        width: 50%;
+        }
+}
+
+.illustrated-book__right {
+@include mq(md) {
+    width: 45.5556%;//492/1080
+margin-left: rem(48);
+}
+
+}
+
+.illustrated-book__img {
+position: relative;
+padding-top: 65.7971%; //227/345
+
+    @include mq(md) {
+    padding-top: 65.9260%; //356/540
+    }
+}
+
+.illustrated-book__img img {
+height: 100%;
+left: 0;
+object-fit: cover;
+position: absolute;
+top: 0;
+width: 100%;
+}
+
+.illustrated-book__content {
+    font-family: $font-family_jp1;
+
+}
+
+.illustrated-book__header {
+    border-bottom: solid rem(1) $accent;
+    padding-bottom: rem(3);
+}
+
+.illustrated-book__title {
+font-size: rem(20);
+line-height: 1.3;
+font-weight: $bold;
+color: $text-base;
+
+@include mq(md) {
+font-size: rem(24);
+}
+}
+
+.illustrated-book__body {
+margin-top: rem(8);
+}
+
+.illustrated-book__text {
+    color: $text-base;
+    line-height: 1.5;
+    font-weight: $regular;
+}
+
+.button__wrapper.button__space--illustrated-book {
+    margin-top: rem(40);
+
+    @include mq(md) {
+    margin-top: rem(41);
+    }
+}

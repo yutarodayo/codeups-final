@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.header {
+  transition: .7s all 0s;
+}
+
+.header.is-active {
+  background-color: $accent;
+}
+
+.drawer__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $accent;
+  width: 100%;
+  height: 100vh;
+  margin-top: rem(80);
+  overflow: auto;
+  padding-bottom: rem(300);
+display: none;
+}
+
+.drawer__wrapper.is-active {
+z-index: 9999;
+
+
+}
+
+.drawer__inner {
+  display: flex;
+}
+
+.drawer__inner.inner {
+  padding-left: rem(14);
+  padding-right: rem(14);
+}
+
+
+.drawer__left,
+.drawer__right {
+    width: 50%;
+}
+
+.drawer__items {
+  display: block;
+  color: $white;
+}
+
+.drawer__item {
+    padding-left: rem(22);
+    padding-top: rem(24);
+}
+
+.drawer__item a {
+  font-size: rem(16);
+  display: block;
+  line-height: 1.14;
+}
+
+.drawer__item a:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+
+.drawer__item--main {
+    padding-top: rem(40);
+    font-weight: $bold;
+
+}
+
+.drawer__item--main a {
+  position: relative;
+
+}
+
+.drawer__item--main a::before {
+    content: url(../images/common/_hitode.svg);
+    display: inline-block;
+  transform: scale(1.0);
+  position: absolute;
+  top: rem(-3);
+  left: rem(-21);
+    
+}
+
+.drawer__item--main:first-of-type {
+    padding-top: rem(25.7);
+  }

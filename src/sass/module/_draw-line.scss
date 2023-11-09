@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.pc-nav__title {
+position: relative;
+
+}
+
+.pc-nav__title:hover {
+    color: $white;
+}
+
+.pc-nav__title::after {
+    content: "";
+    position: absolute;
+    bottom: rem(-4);
+    left: 0;
+    width: 100%;
+    height: rem(2);
+    background-color: $white;
+    transition: all .3s;
+    transform: scale(0,1); /*X方向0、Y方向1*/
+    transform-origin: center top;/*上部中央基点*/
+}
+
+.pc-nav__title:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}

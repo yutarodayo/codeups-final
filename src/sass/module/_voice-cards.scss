@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.voice-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    row-gap: rem(39);
+
+    @include mq(md) {
+        flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 3.5%;
+    }
+}

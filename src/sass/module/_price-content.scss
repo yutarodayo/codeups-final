@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.price__content {
+    width: 100%;
+  @include mq(md) {
+    display: flex;
+  }
+}
+
+.price__img--sp {
+  position: relative;
+  padding-top: 65.7971%; /* 227/345 */
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.price__img--sp img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+}
+
+.price__img--pc {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    position: relative;
+    width: 47.6825%; //492/1077
+    
+    
+  }
+}
+
+.price__img--pc::before {
+    content: "";
+    width: 100%;
+    padding-top: 151.626%; /* 746/492 */
+}
+
+.price__img--pc img {
+  position: absolute;
+  width: 100%;
+  height: 100%; /* 100%だと長すぎたけどautoだといい感じになったけどどゆこと？逆じゃないの？ */
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.table__wrapper {
+    @include mq(md) {
+        width: 48.3175%; //585/1077
+    }
+    
+}
